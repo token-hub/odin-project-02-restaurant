@@ -1,5 +1,7 @@
 class Display {
     #contentDiv = document.querySelector("#content");
+    #headerTitle = "";
+    #contentItem;
 
     constructor(name) {
         this.name = name;
@@ -9,8 +11,24 @@ class Display {
         return this.name;
     }
 
+    get getHeaderTitle() {
+        return this.#headerTitle;
+    }
+
+    get getContentItem() {
+        return this.#contentItem;
+    }
+
     get contentDiv() {
         return this.#contentDiv;
+    }
+
+    set setHeaderTitle(title) {
+        this.#headerTitle = title;
+    }
+
+    set setContentItem(item) {
+        this.#contentItem = item;
     }
 
     clearContentDiv() {
@@ -21,9 +39,6 @@ class Display {
         this.clearContentDiv();
         this.contentDiv.appendChild(this.header());
         this.contentDiv.appendChild(this.content());
-        const test = this.newElement("p");
-        test.innerHTML = this.getName;
-        this.contentDiv.appendChild(test);
     }
 
     newElement(element = "div") {
@@ -31,15 +46,25 @@ class Display {
     }
 
     header() {
-        const newDiv = this.newElement("div");
-        newDiv.innerHTML = "Header here!";
-        return newDiv;
+        const headerDiv = this.newElement("div");
+        headerDiv.classList = "header";
+
+        const title = this.newElement("h3");
+        title.innerHTML = this.getHeaderTitle;
+
+        headerDiv.append(title);
+        return headerDiv;
     }
 
     content() {
-        const newDiv = this.newElement("div");
-        newDiv.innerHTML = "Content here!";
-        return newDiv;
+        const contentDiv = this.newElement("div");
+        contentDiv.classList = "content";
+
+        if (this.getContentItem) {
+            contentDiv.append(this.getContentItem);
+        }
+
+        return contentDiv;
     }
 }
 
