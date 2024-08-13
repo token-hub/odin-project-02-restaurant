@@ -21,6 +21,9 @@ class Display {
         this.clearContentDiv();
         this.contentDiv.appendChild(this.header());
         this.contentDiv.appendChild(this.content());
+        const test = this.newElement("p");
+        test.innerHTML = this.getName;
+        this.contentDiv.appendChild(test);
     }
 
     newElement(element = "div") {
