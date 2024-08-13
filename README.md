@@ -1,6 +1,6 @@
 ## Restaurant
 
-This is a simple project on the JavaScript Course section of the [Odin Project](https://www.theodinproject.com/).
+This is a simple project on the JavaScript Course section of the [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page#project-solution).
 
 ## Installation
 
