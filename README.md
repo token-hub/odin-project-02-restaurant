@@ -19,3 +19,5 @@ npm run start
 ```
 
 The application is configured with webpack dev server, you should be able to see the application now running in the [browser](http://localhost:8080/).
+
+The funny menu list that is showing in the application is coming from this [website](https://www.thefilipinorambler.com/2011/01/naughty-pinoy-food-names.html)
